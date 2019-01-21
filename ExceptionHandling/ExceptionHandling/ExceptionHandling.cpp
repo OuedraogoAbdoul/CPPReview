@@ -5,11 +5,64 @@
 #include <iostream>
 using namespace std;
 
+void division_by_zero();
+
 int main()
 {
-    cout << "Hello World!\n"; 
-	cout << "I am testing the namespace std!!!\n";
+	division_by_zero();
+
+	return 0;
+}
+
+void division_by_zero()
+{
 	
+	try
+	{
+		int num1 = 2;
+		cout << "Please enter first number" << endl;
+		cin >> num1;
+
+		int num2 = 0;
+		cout << "Please enter second number " << endl;
+		cin >> num2;
+
+		if (num2 == 0)
+		{
+			throw 0;
+		}
+
+		if (num2 == 10)
+		{
+			throw "division by 10";
+		}
+
+		if (num2 == 100)
+		{
+			throw string("100");
+		}
+
+		int result = 0;
+		result = num1 / num2;
+		cout << "This is the result \n" << result << '\n';
+	}
+
+	catch (int e)
+	{
+		cout<< "Division by zero is not allowed Error: "<< e <<endl;
+	}
+	catch (char const  *x)
+	{
+		cout<<"Division by 10 error: " << x <<endl;
+	}
+	catch (string &y)
+	{
+		cout<<"Catching another division by 100: "<<endl;
+	}
+
+
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
