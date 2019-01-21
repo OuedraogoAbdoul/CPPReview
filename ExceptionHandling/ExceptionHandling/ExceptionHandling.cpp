@@ -3,10 +3,13 @@
 
 #include "pch.h"
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+    cout << "Hello World!\n"; 
+	cout << "I am testing the namespace std!!!\n";
+	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
